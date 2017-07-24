@@ -8,14 +8,14 @@ public:
         return (findKthNumber(nums1,nums2,0,0,size/2)+findKthNumber(nums1,nums2,0,0,size/2+1))/2.0;
     }
     
-    int findKthNumber(vector<int>& a, vector<int>& b, int m, int n, int k){ //±£Ö¤aµÄÊµ²â³¤¶È±ÈbĞ¡ aµÄÉáÆú³¤¶ÈÎªm bµÄÉáÆú³¤¶ÈÎªn
+    int findKthNumber(vector<int>& a, vector<int>& b, int m, int n, int k){ //ä¿è¯açš„å®æµ‹é•¿åº¦æ¯”bå° açš„èˆå¼ƒé•¿åº¦ä¸ºm bçš„èˆå¼ƒé•¿åº¦ä¸ºn
         if(a.size()-m>b.size()-n)
             return findKthNumber(b,a,n,m,k);
         if(a.size()-m == 0)
             return b[k+n-1];
         if(k == 1)
             return a[k+m-1]<b[k+n-1]?a[k+m-1]:b[k+n-1];
-        //°Ñk·Ö³ÉÁ½part
+        //æŠŠkåˆ†æˆä¸¤part
         int pa = (k/2<a.size()-m)?k/2:(a.size()-m);
         int pb = k-pa;
         if(a[pa+m-1]<b[pb+n-1])
