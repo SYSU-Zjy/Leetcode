@@ -4,7 +4,7 @@ public:
         int tmp = x>0?x:-x;
         int y = 0;
         for(;tmp>0;tmp = tmp/10){
-            if(y>(INT_MAX-tmp%10)/10)//Òç³öµÄÇé¿ö£¬Ë¼¿¼
+            if(y>(INT_MAX-tmp%10)/10)//æº¢å‡ºçš„æƒ…å†µï¼Œæ€è€ƒ
             return 0;
             y = y*10+tmp%10;
         }

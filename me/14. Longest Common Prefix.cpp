@@ -2,11 +2,11 @@ class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
         string premix = "";
-        for(int i = 0;strs.size()>0;premix+=strs[0][i],i++){//Ìõ¼ş²»ÄÜÊÇstrs[0][i]!='\0',ÒòÎªstrsÎª¿Õ£¬strs[0][i]²»´æÔÚ
-            for(int j = 0;j<strs.size();j++)//×¢ÒâjÊÇ0²»ÊÇ1
+        for(int i = 0;strs.size()>0;premix+=strs[0][i],i++){//æ¡ä»¶ä¸èƒ½æ˜¯strs[0][i]!='\0',å› ä¸ºstrsä¸ºç©ºï¼Œstrs[0][i]ä¸å­˜åœ¨
+            for(int j = 0;j<strs.size();j++)//æ³¨æ„jæ˜¯0ä¸æ˜¯1
                 if(i==strs[j].size()||strs[j][i]!=strs[0][i])
                     return premix;
         }
-        return premix;
+        return premix;//return premix when not entering the for loop.
     }
 };

@@ -1,3 +1,5 @@
+/* 对每个字母向左向右展开，算出回文字符串，最终选出最长的回文串*/
+
 class Solution {
 public:
     string longestPalindrome(string s) {
@@ -15,7 +17,7 @@ public:
             right = i;
             findString(s,left,right,startID,length);
         }
-            if(length == 0) length = 1;//���sizeΪ1���ַ������޷�����ѭ��
+            if(length == 0) length = 1;//针对size为1的字符串，无法进入循环
             return s.substr(startID,length);
     }
     

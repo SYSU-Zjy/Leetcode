@@ -21,7 +21,7 @@ public:
 					last--;
 				}
 				else{
-					vector<int>tmp = {nums[i],nums[first],nums[last]};//老版本不通过
+					vector<int>tmp = {nums[i],nums[first],nums[last]};//鑰佺増鏈笉閫氳繃
 					int fv = nums[first];
 					int lv = nums[last];
 					result.push_back(tmp);

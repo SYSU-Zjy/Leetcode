@@ -4,18 +4,18 @@ public:
         if(numRows == 1)
         return s;
         string s1;
-        int tmp = (numRows-1)*2;//ºÜÇÉÃî£¬¾Ù¼¸¸öÀı×Ó
-        for(int i = 0;i<s.size();i = i+tmp){//pushµÚÒ»ĞĞ
+        int tmp = (numRows-1)*2;//å¾ˆå·§å¦™ï¼Œä¸¾å‡ ä¸ªä¾‹å­
+        for(int i = 0;i<s.size();i = i+tmp){//pushç¬¬ä¸€è¡Œ
             s1.push_back(s[i]);
         }
-        for(int i = 1;i<numRows-1;i++){//¶ÔÖĞ¼äĞĞ´¦Àí
+        for(int i = 1;i<numRows-1;i++){//å¯¹ä¸­é—´è¡Œå¤„ç†
             int tmp1 = 2*i;
             for(int j = i;j<s.size();){
                 s1.push_back(s[j]);
-                tmp1 = tmp-tmp1;//¾Ù¸öÀı×Ó£¬ÖĞ¼äĞĞÊÇ½»Ìæ¼ä¸ôµÄ£¬Á½¸ö¼ä¸ôµÄÖµ½»Ìæ
+                tmp1 = tmp-tmp1;//ä¸¾ä¸ªä¾‹å­ï¼Œä¸­é—´è¡Œæ˜¯äº¤æ›¿é—´éš”çš„ï¼Œä¸¤ä¸ªé—´éš”çš„å€¼äº¤æ›¿ã€‚å¾ˆå·§å¦™ï¼Œå®ç°tmp1åœ¨ä¸¤ä¸ªæ•°ä¹‹é—´åŠ¨æ€å¾ªç¯
                 j = j+tmp1;
             }
-        }
+        }       
         for(int i =numRows-1;i<s.size();i = i+tmp){
             s1.push_back(s[i]);
         }

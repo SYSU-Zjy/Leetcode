@@ -3,8 +3,8 @@ public:
     vector< vector<int> > threeSum(vector<int>& nums) {
         vector< vector<int> > result;
         if (nums.size()<3)
-        return result;//ÕâÀï±»¿ÓÁË
-		sort(nums.begin(),nums.end());//sortÖÁÉÙÁ½¸öÊý
+        return result;//è¿™é‡Œè¢«å‘äº†
+		sort(nums.begin(),nums.end());//sortè‡³å°‘ä¸¤ä¸ªæ•°
         for(int i = 0;i<nums.size()-2;){
 			int target = -nums[i];
 			int first = i+1;
@@ -39,5 +39,5 @@ public:
     }
 };
 
-// ÀàËÆÃ°ÅÝÅÅÐò£¬Æðµã×ÜÔÚÒ»¶Ë£¬¸´ÔÓ¶ÈOn^2
-//ÔÚÊý×éÁ½¶ËÍ¬Ê±±ê¼Ç£¬¸´ÔÓ¶ÈOn
+// ç±»ä¼¼å†’æ³¡æŽ’åºï¼Œèµ·ç‚¹æ€»åœ¨ä¸€ç«¯ï¼Œå¤æ‚åº¦On^2
+//åœ¨æ•°ç»„ä¸¤ç«¯åŒæ—¶æ ‡è®°ï¼Œå¤æ‚åº¦On

@@ -12,7 +12,7 @@ public:
         ListNode* pre = NULL;
         ListNode* first = head;
         ListNode* last = head;
-        for(int i = 0;i<n-1;i++){//²»´æÔÚn±ÈÁ´±íµÄ³¤¶È»¹´óµÄÇé¿ö
+        for(int i = 0;i<n-1;i++){//ä¸å­˜åœ¨næ¯”é“¾è¡¨çš„é•¿åº¦è¿˜å¤§çš„æƒ…å†µ note that n-1 not n
             last = last->next;
         }
         while(last->next){
